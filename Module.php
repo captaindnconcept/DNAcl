@@ -3,18 +3,14 @@
 namespace DNAcl;
 
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
+
 /**
  * Description of DNAclModule
  * 
  * Création d'une liste d'authorisation à partir d'un fichier de configuration
  * 
  */
-class Module implements AutoloaderProviderInterface, ConfigProviderInterface {
-
-   public function getConfig() {
-      return include __DIR__ . '/config/module.config.php';
-   }
+class Module implements AutoloaderProviderInterface {
 
    public function getAutoloaderConfig() {
       return [
